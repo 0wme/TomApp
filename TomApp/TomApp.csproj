@@ -55,4 +55,16 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Images\icon1.png" />
+	  <None Remove="Resources\Images\icon4.png" />
+	  <None Remove="Resources\Images\icon2.png" />
+	  <None Remove="Resources\Images\icon3.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\icon1.png" />
+	  <BundleResource Include="Resources\Images\icon4.png" />
+	  <BundleResource Include="Resources\Images\icon2.png" />
+	  <BundleResource Include="Resources\Images\icon3.png" />
+	</ItemGroup>
 </Project>
