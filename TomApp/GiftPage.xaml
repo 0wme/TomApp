@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomApp.GifPage"
+             Title="Gif Page">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image Source="Images/a_gif.gif" Aspect="AspectFit" />
+            <Button Text="Retour" Clicked="OnBackButtonClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
