@@ -5,8 +5,9 @@
              Title="Page1">
     <ScrollView>
         <VerticalStackLayout>
-            <Label Text="Bienvenue sur la Page1 !" FontSize="Large" HorizontalOptions="Center" />
-            <Label Text="Ici débute le projet MAUI !" FontSize="Medium" HorizontalOptions="Center" />
+            <Label Text="Bienvenue sur C-Guess !" FontSize="Large" HorizontalOptions="Center" />
+            <Label Text="Ici débute l'application sur les pays" FontSize="Medium" HorizontalOptions="Center" />
+            
             <CarouselView x:Name="CarouselImages" ItemsSource="{Binding images}" Loop="True" PeekAreaInsets="50" HorizontalOptions="FillAndExpand" HeightRequest="200">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
