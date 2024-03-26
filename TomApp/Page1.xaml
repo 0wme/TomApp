@@ -8,8 +8,6 @@
             <Label Text="Bienvenue sur la Page1 !" FontSize="Large" HorizontalOptions="Center" />
             <Label Text="Ici débute le projet MAUI !" FontSize="Medium" HorizontalOptions="Center" />
             <HorizontalStackLayout>
-                <Image Source="icon1.png" Aspect="AspectFit" />
-                <Image Source="icon2.png" Aspect="AspectFit" />
             </HorizontalStackLayout>
             <Button Text="Ouvrir la page GIF" Clicked="OnButtonClicked" />
             <CarouselView>
