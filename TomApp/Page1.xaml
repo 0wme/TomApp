@@ -10,8 +10,6 @@
             <HorizontalStackLayout>
             </HorizontalStackLayout>
             <Button Text="Ouvrir la page GIF" Clicked="OnButtonClicked" />
-            <CarouselView>
-            </CarouselView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
