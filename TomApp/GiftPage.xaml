@@ -5,7 +5,12 @@
              Title="Gif Page">
     <ScrollView>
         <VerticalStackLayout>
-            <Image Source="Images/a_gif.gif" Aspect="AspectFit" />
+            <Image Source="a_gif.gif"
+                   x:Name="imgLoader"
+                   HeightRequest="200" 
+                   HorizontalOptions="Center" 
+                   IsAnimationPlaying="False" />
+            
             <Button Text="Retour" Clicked="OnBackButtonClicked" />
         </VerticalStackLayout>
     </ScrollView>
