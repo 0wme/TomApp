@@ -7,8 +7,13 @@
         <VerticalStackLayout>
             <Label Text="Bienvenue sur la Page1 !" FontSize="Large" HorizontalOptions="Center" />
             <Label Text="Ici débute le projet MAUI !" FontSize="Medium" HorizontalOptions="Center" />
-            <HorizontalStackLayout>
-            </HorizontalStackLayout>
+            <CarouselView x:Name="CarouselImages" ItemsSource="{Binding images}" Loop="True" PeekAreaInsets="50" HorizontalOptions="FillAndExpand" HeightRequest="200">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding .}" Aspect="AspectFill"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
             <Button Text="Ouvrir la page GIF" Clicked="OnButtonClicked" />
         </VerticalStackLayout>
     </ScrollView>
