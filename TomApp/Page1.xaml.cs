@@ -27,4 +27,6 @@ public partial class Page1 : ContentPage
     {
         await Navigation.PushAsync(new GifPage());
     }
+    
+    
 }
