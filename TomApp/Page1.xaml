@@ -16,10 +16,7 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
             <Button Text="Ouvrir la page GIF" Clicked="OnButtonClicked"/>
-            <HorizontalStackLayout Spacing="10">
-                <Image Source="imgcarrousel1.jpeg" Aspect="AspectFill" WidthRequest="100" HeightRequest="100"/>
-                <Image Source="imgcarrousel2.jpeg" Aspect="AspectFill" WidthRequest="100" HeightRequest="100"/>
-            </HorizontalStackLayout>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
