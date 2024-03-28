@@ -4,10 +4,10 @@
              x:Class="TomApp.Page1"
              Title="Page1">
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="20">
             <Label Text="Bienvenue sur C-Guess !" FontSize="Large" HorizontalOptions="Center" />
             <Label Text="Ici débute l'application sur les pays" FontSize="Medium" HorizontalOptions="Center" />
-            
+
             <CarouselView x:Name="CarouselImages" ItemsSource="{Binding images}" Loop="True" PeekAreaInsets="50" HorizontalOptions="FillAndExpand" HeightRequest="200">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
@@ -15,9 +15,11 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-            <Button Text="Ouvrir la page GIF" Clicked="OnButtonClicked" />
-            <Image Source="imgcarrousel1.jpeg" Aspect="AspectFill"/>
-            <Image Source="imgcarrousel2.jpeg" Aspect="AspectFill"/>
+            <Button Text="Ouvrir la page GIF" Clicked="OnButtonClicked"/>
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="imgcarrousel1.jpeg" Aspect="AspectFill" WidthRequest="100" HeightRequest="100"/>
+                <Image Source="imgcarrousel2.jpeg" Aspect="AspectFill" WidthRequest="100" HeightRequest="100"/>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
