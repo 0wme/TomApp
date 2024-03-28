@@ -5,20 +5,34 @@
     <ScrollView>
         <StackLayout Padding="20">
             <Image Source="{Binding Media.Flag}" Aspect="AspectFit"/>
-            <Label Text="Nom du pays:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold"/>
-            <Label Text="Capitale:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Capital}" FontSize="Medium"/>
-            <Label Text="Population:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Population}" FontSize="Medium"/>
-            <Label Text="Abbreviation:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Abbreviation}" FontSize="Medium"/>
-            <Label Text="Currency:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Currency}" FontSize="Medium"/>
-            <Label Text="Phone:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Phone}" FontSize="Medium"/>
-            <Label Text="Id:" FontSize="Medium" FontAttributes="Bold"/>
-            <Label Text="{Binding Id}" FontSize="Medium"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nom du pays:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Capitale:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Capital}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Population:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Population}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Abbreviation:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Abbreviation}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Currency:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Currency}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Phone:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Phone}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Id:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Id}" FontSize="Medium"/>
+            </StackLayout>
         </StackLayout>
     </ScrollView>
 </ContentPage>
