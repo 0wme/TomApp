@@ -9,6 +9,6 @@ public partial class Page4 : ContentPage
 	
 	public async void OnPlayButtonClicked(object sender, EventArgs e)
 	{
-	    await Navigation.PushAsync(new GamePage());
+	    await Navigation.PushAsync(new GameModePage());
 	}
 }
