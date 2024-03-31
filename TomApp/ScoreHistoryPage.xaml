@@ -1,19 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TomApp.ScoreHistoryPage"
              Title="Historique des scores">
-    <StackLayout>
-        <Button Text="Afficher l'historique de jeu Illimité" Clicked="OnShowUnlimitedGameHistoryButtonClicked"/>
-        <Button Text="Afficher l'historique de jeu 10 Pays" Clicked="OnShowTenCountriesGameHistoryButtonClicked"/>
-        <Button Text="Afficher l'historique de jeu 10 Pays avec 3 Chances" Clicked="OnShowTenCountriesThreeChancesGameHistoryButtonClicked"/>
-        <ListView x:Name="ScoreListView">
+    
+    <VerticalStackLayout
+        VerticalOptions="Center"    
+        HorizontalOptions="Fill"  
+        Spacing="20"          
+        Padding="30">             
+
+        <Button Text="Afficher l'historique de jeu Illimité"
+                HorizontalOptions="Fill"
+                Clicked="OnShowUnlimitedGameHistoryButtonClicked"/>
+        <Button Text="Afficher l'historique de jeu 10 Pays"
+                HorizontalOptions="Fill"
+                Clicked="OnShowTenCountriesGameHistoryButtonClicked"/>
+        <Button Text="Afficher l'historique de jeu 10 Pays avec 3 Chances"
+                HorizontalOptions="Fill"
+                Clicked="OnShowTenCountriesThreeChancesGameHistoryButtonClicked"/>
+        <ListView x:Name="ScoreListView"
+                  VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding UserName}" Detail="{Binding CorrectGuessCount}"/>
+                    <TextCell Text="{Binding UserName}"
+                              Detail="{Binding CorrectGuessCount}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
