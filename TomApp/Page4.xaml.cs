@@ -11,4 +11,8 @@ public partial class Page4 : ContentPage
 	{
 	    await Navigation.PushAsync(new GameModePage());
 	}
+		private async void OnScoreHistoryButtonClicked(object sender, EventArgs e)
+	{
+	    await Navigation.PushAsync(new ScoreHistoryPage());
+	}
 }

@@ -12,6 +12,10 @@
         <Button 
             Text="Jouer" 
             Clicked="OnPlayButtonClicked" VerticalOptions="Center" HorizontalOptions="Center" />
+        
+        <Button 
+            Text="Historique des scores" 
+            Clicked="OnScoreHistoryButtonClicked"/>
 
     </VerticalStackLayout>
 </ContentPage>
