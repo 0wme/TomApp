@@ -12,11 +12,17 @@ namespace TomApp
         private ApiService _apiService;
         private List<Country> _countries;
         private Country _currentCountry;
+        private GameMode _gameMode;
+        private int _guessCount;
+        private int _correctGuessCount;
 
-        public GamePage()
+        public GamePage(GameMode gameMode)
         {
             InitializeComponent();
             _apiService = new ApiService();
+            _gameMode = gameMode;
+            _guessCount = 0;
+            _correctGuessCount = 0;
             LoadCountry();
         }
 
@@ -29,14 +35,35 @@ namespace TomApp
 
         private void OnCheckButtonClicked(object sender, EventArgs e)
         {
+            _guessCount++;
             if (CountryNameEntry.Text == _currentCountry.Name)
             {
+                _correctGuessCount++;
                 ResultLabel.Text = "Bonne réponse!";
-                LoadCountry();
+                if (_gameMode == GameMode.Unlimited || (_gameMode != GameMode.Unlimited && _guessCount < 10))
+                {
+                    LoadCountry();
+                }
+                else
+                {
+                    ResultLabel.Text += $" Vous avez trouvé {_correctGuessCount} pays sur 10.";
+                }
             }
             else
             {
                 ResultLabel.Text = "Mauvaise réponse!";
+                if (_gameMode == GameMode.TenCountriesThreeChances && _guessCount - _correctGuessCount >= 3)
+                {
+                    ResultLabel.Text += " Vous avez perdu vos 3 chances. Le jeu est terminé.";
+                }
+                else if (_gameMode != GameMode.Unlimited && _guessCount < 10)
+                {
+                    LoadCountry();
+                }
+                else
+                {
+                    ResultLabel.Text += $" Vous avez trouvé {_correctGuessCount} pays sur 10.";
+                }
             }
         }
     }
