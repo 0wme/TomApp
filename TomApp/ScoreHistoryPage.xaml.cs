@@ -13,18 +13,18 @@ public partial class ScoreHistoryPage : ContentPage
         InitializeComponent();
     }
 
-    private void OnShowUnlimitedGameHistoryButtonClicked(object sender, EventArgs e)
+    private async void OnShowUnlimitedGameHistoryButtonClicked(object sender, EventArgs e)
     {
-        ScoreListView.ItemsSource = ScoreHistory.GetScores(GameMode.Unlimited);
+        await Navigation.PushAsync(new ScoreListPage(GameMode.Unlimited));
     }
 
-    private void OnShowTenCountriesGameHistoryButtonClicked(object sender, EventArgs e)
+    private async void OnShowTenCountriesGameHistoryButtonClicked(object sender, EventArgs e)
     {
-        ScoreListView.ItemsSource = ScoreHistory.GetScores(GameMode.TenCountries);
+        await Navigation.PushAsync(new ScoreListPage(GameMode.TenCountries));
     }
 
-    private void OnShowTenCountriesThreeChancesGameHistoryButtonClicked(object sender, EventArgs e)
+    private async void OnShowTenCountriesThreeChancesGameHistoryButtonClicked(object sender, EventArgs e)
     {
-        ScoreListView.ItemsSource = ScoreHistory.GetScores(GameMode.TenCountriesThreeChances);
+        await Navigation.PushAsync(new ScoreListPage(GameMode.TenCountriesThreeChances));
     }
 }
