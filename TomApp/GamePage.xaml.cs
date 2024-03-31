@@ -66,5 +66,10 @@ namespace TomApp
                 }
             }
         }
+
+        private void OnHintButtonClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Indice", $"Le pays est {_currentCountry.Name}.", "OK");
+        }
     }
 }

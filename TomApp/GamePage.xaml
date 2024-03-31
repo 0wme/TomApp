@@ -7,5 +7,6 @@
         <Entry x:Name="CountryNameEntry" Placeholder="Entrez le nom du pays"/>
         <Button Text="Vérifier" Clicked="OnCheckButtonClicked"/>
         <Label x:Name="ResultLabel"/>
+        <Button Text="Indice" Clicked="OnHintButtonClicked"/>
     </StackLayout>
 </ContentPage>
