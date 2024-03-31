@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TomApp.GameModePage"
              Title="Mode de Jeu">
-    <StackLayout Padding="20">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
         <Button Text="Mode Illimité" Clicked="OnUnlimitedModeClicked"/>
         <Button Text="Mode 10 Pays" Clicked="OnTenCountriesModeClicked"/>
         <Button Text="Mode 10 Pays avec 3 Chances" Clicked="OnTenCountriesThreeChancesModeClicked"/>
