@@ -6,4 +6,9 @@ public partial class Page4 : ContentPage
 	{
 		InitializeComponent();
 	}
+	
+	public async void OnPlayButtonClicked(object sender, EventArgs e)
+	{
+	    await Navigation.PushAsync(new GamePage());
+	}
 }
