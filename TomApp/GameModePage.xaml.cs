@@ -15,17 +15,17 @@ namespace TomApp
 
         private async void OnUnlimitedModeClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GamePage(GameMode.Unlimited));
+            await Navigation.PushAsync(new EnterNamePage(GameMode.Unlimited));
         }
 
         private async void OnTenCountriesModeClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GamePage(GameMode.TenCountries));
+            await Navigation.PushAsync(new EnterNamePage(GameMode.TenCountries));
         }
 
         private async void OnTenCountriesThreeChancesModeClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GamePage(GameMode.TenCountriesThreeChances));
+            await Navigation.PushAsync(new EnterNamePage(GameMode.TenCountriesThreeChances));
         }
     }
     
