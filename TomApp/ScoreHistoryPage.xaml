@@ -19,15 +19,5 @@
         <Button Text="Afficher l'historique de jeu 10 Pays avec 3 Chances"
                 HorizontalOptions="Fill"
                 Clicked="OnShowTenCountriesThreeChancesGameHistoryButtonClicked"/>
-        <ListView x:Name="ScoreListView"
-                  VerticalOptions="Start"
-                  HorizontalOptions="FillAndExpand">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding UserName}"
-                              Detail="{Binding CorrectGuessCount}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
     </VerticalStackLayout>
 </ContentPage>
