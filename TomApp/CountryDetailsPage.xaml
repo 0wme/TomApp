@@ -6,30 +6,34 @@
         <StackLayout Padding="20">
             <Image Source="{Binding Media.Flag}" Aspect="AspectFit"/>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Nom du pays:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="Titre:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded}">
+                <Label Text="Description:" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Capital}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded, Converter={StaticResource InverseBooleanConverter}}">
                 <Label Text="Capitale:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Capital}" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded, Converter={StaticResource InverseBooleanConverter}}">
                 <Label Text="Population:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Population}" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded, Converter={StaticResource InverseBooleanConverter}}">
                 <Label Text="Abbreviation:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Abbreviation}" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded, Converter={StaticResource InverseBooleanConverter}}">
                 <Label Text="Currency:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Currency}" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded, Converter={StaticResource InverseBooleanConverter}}">
                 <Label Text="Phone:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Phone}" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsManuallyAdded, Converter={StaticResource InverseBooleanConverter}}">
                 <Label Text="Id:" FontSize="Medium" FontAttributes="Bold"/>
                 <Label Text="{Binding Id}" FontSize="Medium"/>
             </StackLayout>
