@@ -9,6 +9,7 @@ public class Country
     public int Population { get; set; }
     public Media Media { get; set; }
     public int Id { get; set; }
+    public bool IsManuallyAdded { get; set; }
 }
 
 public class Media
