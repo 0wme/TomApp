@@ -6,19 +6,19 @@
     xmlns:local="clr-namespace:TomApp"
     Shell.FlyoutBehavior="Disabled">
 
-    <Tab Title="Page1" Icon="icon1.png">
+    <Tab Title="Menu" Icon="icon1.png">
         <ShellContent ContentTemplate="{DataTemplate local:Page1}" />
     </Tab>
 
-    <Tab Title="Page2" Icon="icon2.png">
+    <Tab Title="Drapeau" Icon="flag.png">
         <ShellContent ContentTemplate="{DataTemplate local:Page2}" />
     </Tab>
 
-    <Tab Title="Page3" Icon="icon3.png">
+    <Tab Title="Ajouter" Icon="add.png">
         <ShellContent ContentTemplate="{DataTemplate local:Page3}" />
     </Tab>
 
-    <Tab Title="Page4" Icon="icon4.png">
+    <Tab Title="Jeu" Icon="game.png">
         <ShellContent ContentTemplate="{DataTemplate local:Page4}" />
     </Tab>
 
