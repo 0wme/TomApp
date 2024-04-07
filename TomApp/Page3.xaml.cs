@@ -16,7 +16,8 @@ namespace TomApp
             {
                 Name = TitleEntry.Text,
                 Media = new Media { Flag = ImageEntry.Text },
-                Capital = DescriptionEntry.Text
+                Capital = DescriptionEntry.Text,
+                IsManuallyAdded = true
             };
 
             MessagingCenter.Send(this, "AddCountry", country);
