@@ -39,13 +39,13 @@
             
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Image Source="flagsign.jpeg" 
-                       WidthRequest="400" 
-                       HeightRequest="400" 
+                       WidthRequest="200" 
+                       HeightRequest="200" 
                        Aspect="AspectFit" 
                        HorizontalOptions="Center"/>
                 <Image Source="flagmap.jpeg" 
-                       WidthRequest="400" 
-                       HeightRequest="400" 
+                       WidthRequest="200" 
+                       HeightRequest="200" 
                        Aspect="AspectFit" 
                        HorizontalOptions="Center"/>
             </HorizontalStackLayout>
