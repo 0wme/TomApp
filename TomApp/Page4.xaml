@@ -3,18 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TomApp.Page4"
              Title="Page4">
-    <VerticalStackLayout>
-        <Label 
-            VerticalOptions="Center" 
+
+    <VerticalStackLayout 
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="25">
+
+        <Image 
+            Source="Resources/Images/cguess_game.png"
+            WidthRequest="400"
+            HeightRequest="400"
             HorizontalOptions="Center" />
+
+        <Label 
+            Text="Bienvenue dans le jeu !" 
+            FontSize="Large"
+            HorizontalTextAlignment="Center" />
         
         <Button 
             Text="Jouer" 
-            Clicked="OnPlayButtonClicked" VerticalOptions="Center" HorizontalOptions="Center" />
-        
+            Clicked="OnPlayButtonClicked"
+            WidthRequest="200" 
+            HeightRequest="60"
+            HorizontalOptions="Center"
+            Style="{StaticResource MainButtonStyle}" />
+
         <Button 
             Text="Historique des scores" 
-            Clicked="OnScoreHistoryButtonClicked"/>
+            Clicked="OnScoreHistoryButtonClicked"
+            WidthRequest="200"
+            HeightRequest="60"
+            HorizontalOptions="Center"
+            Style="{StaticResource MainButtonStyle}" />
 
     </VerticalStackLayout>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MainButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2196F3"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
 </ContentPage>
