@@ -19,5 +19,6 @@ namespace TomApp
                 await Navigation.PushAsync(new CountryDetailsPage(country));
             }
         }
+
     }
 }
