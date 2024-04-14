@@ -64,7 +64,6 @@
 
 	<ItemGroup>
 	  <Folder Include="ViewModel\" />
-	  <Folder Include="View\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,6 +71,16 @@
 	    <DependentUpon>Country.xaml</DependentUpon>
 	    <SubType>Code</SubType>
 	  </Compile>
+	  <Compile Update="View\CountryDetailsPage.xaml.cs">
+	    <DependentUpon>CountryDetailsPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\CountryDetailsPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
 	</ItemGroup>
 
 	

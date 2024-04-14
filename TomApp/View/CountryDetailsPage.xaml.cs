@@ -1,3 +1,4 @@
+// CountryDetailsPage.xaml.cs
 using Microsoft.Maui.Controls;
 
 namespace TomApp
@@ -7,7 +8,7 @@ namespace TomApp
         public CountryDetailsPage(Country country)
         {
             InitializeComponent();
-            BindingContext = country;
+            BindingContext = new CountryViewModel(country);
         }
     }
 }
