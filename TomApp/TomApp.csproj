@@ -63,10 +63,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Compile Update="Model\Country.cs">
 	    <DependentUpon>Country.xaml</DependentUpon>
 	    <SubType>Code</SubType>
