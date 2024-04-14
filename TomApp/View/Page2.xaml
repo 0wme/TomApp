@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TomApp"
              x:Class="TomApp.Page2"
-             Title="Page2">
+             Title="Liste des drapeaux">
     <CollectionView ItemsSource="{Binding Countries}" SelectionMode="Single" SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemTemplate>
             <DataTemplate>
