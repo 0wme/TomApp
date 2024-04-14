@@ -62,6 +62,18 @@
 		<None Remove="Resources\Images\icon3.png" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="ViewModel\" />
+	  <Folder Include="View\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Model\Country.xaml.cs">
+	    <DependentUpon>Country.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
 	
 
 </Project>
