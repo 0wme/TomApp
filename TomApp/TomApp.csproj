@@ -75,6 +75,14 @@
 	    <DependentUpon>Page2.xaml</DependentUpon>
 	    <SubType>Code</SubType>
 	  </Compile>
+	  <Compile Update="ViewModel\Page2ViewModel.cs">
+	    <DependentUpon>Page2ViewModel.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="ViewModel\ApiService.cs">
+	    <DependentUpon>ApiService.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
