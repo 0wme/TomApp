@@ -75,10 +75,17 @@
 	    <DependentUpon>CountryDetailsPage.xaml</DependentUpon>
 	    <SubType>Code</SubType>
 	  </Compile>
+	  <Compile Update="View\Page2.xaml.cs">
+	    <DependentUpon>Page2.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="View\CountryDetailsPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Page2.xaml">
 	    <SubType>Designer</SubType>
 	  </MauiXaml>
 	</ItemGroup>

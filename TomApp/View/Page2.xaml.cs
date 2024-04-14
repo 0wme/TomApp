@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using System.Linq;
 
 namespace TomApp
 {
@@ -12,7 +13,7 @@ namespace TomApp
 
         private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var country = (Country)e.CurrentSelection.FirstOrDefault();
+            var country = e.CurrentSelection.FirstOrDefault() as Country;
             if (country != null)
             {
                 await Navigation.PushAsync(new CountryDetailsPage(country));
