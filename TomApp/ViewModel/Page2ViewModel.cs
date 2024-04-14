@@ -1,6 +1,8 @@
+using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Dispatching;
 using System.Threading.Tasks;
+using TomApp;
 
 public class Page2ViewModel
 {
@@ -10,15 +12,22 @@ public class Page2ViewModel
     public Page2ViewModel()
     {
         LoadCountries();
+
+        MessagingCenter.Subscribe<Page3, Country>(this, "AddCountry", (sender, country) =>
+        {
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                Countries.Add(country);
+            });
+        });
     }
 
     private async void LoadCountries()
     {
         var countries = await _apiService.GetCountriesAsync();
-        var dispatcher = Dispatcher.GetForCurrentThread();
-        if (dispatcher != null && countries != null)
+        if (countries != null)
         {
-            dispatcher.Dispatch(() =>
+            MainThread.BeginInvokeOnMainThread(() =>
             {
                 foreach (var country in countries)
                 {
