@@ -68,7 +68,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Model\Country.xaml.cs">
+	  <Compile Update="Model\Country.cs">
 	    <DependentUpon>Country.xaml</DependentUpon>
 	    <SubType>Code</SubType>
 	  </Compile>
