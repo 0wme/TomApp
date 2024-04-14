@@ -1,17 +1,56 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TomApp.Page3"
-             Title="Page3">
-    <VerticalStackLayout>
-        <Label Text="Titre" />
-        <Entry x:Name="TitleEntry" />
+             Title="Ajout d'une nouvelle entrée">
 
-        <Label Text="Image URL" />
-        <Entry x:Name="ImageEntry" />
+    <VerticalStackLayout Spacing="20" Padding="30" HorizontalOptions="FillAndExpand">
 
-        <Label Text="Description" />
-        <Entry x:Name="DescriptionEntry" />
+        <Frame BackgroundColor="#f5f5f5" CornerRadius="10" Padding="20">
+            <VerticalStackLayout Spacing="15">
+                <Label Text="Titre" FontSize="Medium" />
+                <Entry x:Name="TitleEntry" 
+                       Placeholder="Entrez le titre ici" 
+                       BackgroundColor="White"
+                       Margin="0,0,0,10"/>
 
-        <Button Text="Valider" Clicked="OnValidateButtonClicked" />
+                <Label Text="Image URL" FontSize="Medium" />
+                <Entry x:Name="ImageEntry" 
+                       Placeholder="Entrez l'URL de l'image ici" 
+                       BackgroundColor="White"
+                       Margin="0,0,0,10"/>
+
+                <Label Text="Description" FontSize="Medium" />
+                <Editor x:Name="DescriptionEntry" 
+                        Placeholder="Entrez la description ici" 
+                        BackgroundColor="White"
+                        HeightRequest="150"/>
+
+                <Button Text="Valider" 
+                        Clicked="OnValidateButtonClicked" 
+                        BackgroundColor="#2196F3"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Margin="0,10"/>
+            </VerticalStackLayout>
+        </Frame>
     </VerticalStackLayout>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="Keyboard" Value="Text"/>
+                <Setter Property="TextColor" Value="#444"/>
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="TextColor" Value="#444"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#555"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
 </ContentPage>
